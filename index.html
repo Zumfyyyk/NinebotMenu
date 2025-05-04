@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ScootUI</title>
+  <title>ScootUI — Ninebot G2 Max</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main>
-    <section class="speedometer">
-      <div id="speed">--</div>
-      <span>km/h</span>
+    <h1>ScootUI</h1>
+
+    <section class="dashboard">
+      <div class="speedometer">
+        <div id="speed">--</div>
+        <span>km/h</span>
+      </div>
+
+      <div class="stats">
+        <p>Дистанция: <span id="distance">--</span> км</p>
+        <p>Батарея: <span id="battery">--</span>%</p>
+        <p>Температура: <span id="temp">--</span>°C</p>
+      </div>
     </section>
 
-    <section class="stats">
-      <p>Distance: <span id="distance">--</span> km</p>
-      <p>Battery: <span id="battery">--</span>%</p>
-      <p>Motor Temp: <span id="temp">--</span>°C</p>
-    </section>
+    <section class="actions">
+      <button id="connectBtn">🔍 Найти самокат</button>
+      <p id="deviceStatus">Устройство не подключено</p>
 
-    <section class="controls">
-      <button onclick="lock()">Lock</button>
-      <button onclick="unlock()">Unlock</button>
-    </section>
+      <button onclick="lock()">🔒 Заблокировать</button>
+      <button onclick="unlock()">🔓 Разблокировать</button>
 
-    <section class="map">
-      <div id="map"></div>
-    </section>
-
-    <section class="camera">
-      <video id="video" autoplay muted></video>
+      <button id="toggleCameraBtn">🎥 Включить камеру</button>
+      <video id="video" autoplay muted playsinline style="display:none;"></video>
     </section>
   </main>
+
   <script src="app.js"></script>
 </body>
 </html>
