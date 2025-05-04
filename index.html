@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ScootUI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <section class="speedometer">
+      <div id="speed">--</div>
+      <span>km/h</span>
+    </section>
+
+    <section class="stats">
+      <p>Distance: <span id="distance">--</span> km</p>
+      <p>Battery: <span id="battery">--</span>%</p>
+      <p>Motor Temp: <span id="temp">--</span>°C</p>
+    </section>
+
+    <section class="controls">
+      <button onclick="lock()">Lock</button>
+      <button onclick="unlock()">Unlock</button>
+    </section>
+
+    <section class="map">
+      <div id="map"></div>
+    </section>
+
+    <section class="camera">
+      <video id="video" autoplay muted></video>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

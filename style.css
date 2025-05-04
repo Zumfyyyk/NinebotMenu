@@ -1,0 +1,27 @@
+body {
+    background: #121212;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px;
+  }
+  .speedometer #speed {
+    font-size: 64px;
+    color: #b388ff; /* фиолетовая тема */
+  }
+  .map, .camera {
+    margin-top: 10px;
+  }
+  #map, #video {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+  }
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+  }
